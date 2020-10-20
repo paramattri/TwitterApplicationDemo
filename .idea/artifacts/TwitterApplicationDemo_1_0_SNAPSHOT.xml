@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TwitterApplicationDemo-1.0-SNAPSHOT">
+    <output-path>D:\Work\School_Of_Fintech\TwitterApplicationDemo\build\libs</output-path>
+    <root id="archive" name="TwitterApplicationDemo-1.0-SNAPSHOT.jar">
+      <element id="module-output" name="TwitterApplicationDemo.main" />
+    </root>
+  </artifact>
+</component>
