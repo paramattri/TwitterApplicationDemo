@@ -1,4 +1,5 @@
 import kotlinx.browser.window
+import kotlinx.css.style
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
 import kotlinx.html.js.onClickFunction
@@ -7,13 +8,11 @@ import react.RBuilder
 import react.RComponent
 import react.RProps
 import react.RState
-import react.dom.br
-import react.dom.div
-import react.dom.h1
-import react.dom.label
+import react.dom.*
 import styled.css
 import styled.styledDiv
 import styled.styledInput
+import styled.styledTextArea
 
 external interface WelcomeProps : RProps {
     var name: String
@@ -38,60 +37,65 @@ class Welcome(props: WelcomeProps) : RComponent<WelcomeProps, WelcomeState>(prop
 
         div { br(){} }
         label { +"First Name:\t" }
+        br {  }
         styledInput {
             css {
                 +WelcomeStyles.textInput
             }
             attrs {
                 type = InputType.text
-                placeholder = "Enter Here"
+                placeholder = "Enter First Name Here"
             }
         }
         div { br(){} }
         label { +"Surname: " }
+        br {  }
         styledInput {
             css {
                 +WelcomeStyles.textInput
             }
             attrs {
                 type = InputType.text
-                placeholder = "Enter Here"
+                placeholder = "Enter Surname Here"
             }
         }
 
         div { br(){} }
         label { +"User Name: " }
+        br {  }
         styledInput {
             css {
                 +WelcomeStyles.textInput
             }
             attrs {
                 type = InputType.text
-                placeholder = "Enter Here"
+                placeholder = "Enter Username Here"
             }
         }
 
         div { br(){} }
         label { +"Password: " }
+        br {  }
         styledInput {
             css {
                 +WelcomeStyles.textInput
             }
             attrs {
                 type = InputType.password
-                placeholder = "Enter Here"
+                placeholder = "Enter Password Here"
             }
         }
 
         div { br(){} }
         label { +"Email Id: " }
+        br {  }
         styledInput {
             css {
                 +WelcomeStyles.textInput
             }
             attrs {
                 type = InputType.email
-                placeholder = "abc@gmail.com"
+                placeholder = "Enter EmailId Here"
             }
         }
 
@@ -105,6 +109,29 @@ class Welcome(props: WelcomeProps) : RComponent<WelcomeProps, WelcomeState>(prop
                 value = "Submit"
                 onClickFunction = { event ->
                     window.alert("You are Successfully Registered!!")
+                }
+            }
+        }
+
+        div { br(){} }
+        label { +"Any Feedback?" }
+        br {  }
+        styledTextArea {
+            css {
+                +WelcomeStyles.textInput
+            }
+            attrs {
+                placeholder = "Type Here!"
+            }
+        }
+        div{
+            br(){}
+        }
+        div{
+            img(src="https://developer.okta.com/assets-jekyll/blog/kotlin-react-crud/kotlin-react-a882e0f5d6556c7f26cf66f86b70e2a4d5fd762aedb707993998162acadf872c.png",alt = "Image Not Found"){
+                attrs{
+                    height = "120px"
+                    width = "150px"
                 }
             }
         }
