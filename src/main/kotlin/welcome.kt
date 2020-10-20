@@ -45,12 +45,6 @@ class Welcome(props: WelcomeProps) : RComponent<WelcomeProps, WelcomeState>(prop
             attrs {
                 type = InputType.text
                 placeholder = "Enter Here"
-                //value = state.name
-//                onChangeFunction = { event ->
-//                    setState(
-//                            WelcomeState(name = (event.target as HTMLInputElement).value)
-//                    )
-//                }
             }
         }
         div { br(){} }
